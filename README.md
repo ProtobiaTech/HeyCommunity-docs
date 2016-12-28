@@ -1,5 +1,7 @@
 # HeyCommunity 文档
 
+// 文档正在持续完善
+
 HeyCommunity 是一个基于 [Ionic](http://ionicframework.com) 开发的开源社交 hybrid app（支持 IOS 和 Android 系统，也支持 WebApp），目前 HeyCommunity 有如下功能和模块:
 
 功能或模块 | 描述
@@ -26,4 +28,3 @@ HeyCommunity 使用 [GPLv3](http://www.gnu.org/licenses/gpl.html) 授权，如�
 
 欢迎你为 [HeyCommunity](https://github.com/dev4living/HeyCommunity) 捐献代码，阅读相关文档。   
 本文档托管在 [https://github.com/dev4living/HeyCommunity-docs](https://github.com/dev4living/HeyCommunity-docs)，发现文档的纰漏请向我们反馈或代为修正。
-
