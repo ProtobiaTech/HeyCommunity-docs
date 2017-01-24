@@ -22,5 +22,5 @@
 
 ## 其他
 * [捐献代码](other/contributing.md)
-* [GPL V3 LICENSES](other/gpl-v3-license.md)
 * [联系我们](other/contact.md)
+* [GPL V3 LICENSES](other/gpl-v3-license.md)
