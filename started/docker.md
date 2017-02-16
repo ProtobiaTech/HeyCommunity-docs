@@ -1,10 +1,10 @@
-# Docker 安装
+# Docker 部署
 
 Docker Image 托管在[这里](https://hub.daocloud.io/repos/e9aa4c04-33ac-4bc4-99fa-fb727c7acc11)，你可以参考以下 compose 规则进行自定义部署 HeyCommunity
 
 ```
 app:
-  image: daocloud.io/rodv2/hey-community-cloud:latest
+  image: daocloud.io/rodv2/hey-community:latest
   environment:
     - LOCALE=zh-CN
     - HC_ENV=product

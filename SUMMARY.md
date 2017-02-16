@@ -7,6 +7,7 @@
 // * [获取源代码](started/get-sources.md)
 * [构建与部署](started/build-deploy.md)
 * [使用 Docker 部署](started/docker.md)
+* [使用 Daocloud 快速部署](started/daocloud.md)
 
 
 ## Frontend API
@@ -15,6 +16,7 @@
 
 
 ## 支持
+* [FAQ](support/faq.md)
 * [二次开发指南](support/secondary-development-guide.md)
 * [Bug和问题](support/issue.md)
 * [交流和讨论](support/bbs.md)
