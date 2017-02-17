@@ -313,12 +313,13 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="docker-&#x90E8;&#x7F72;">Docker &#x90E8;&#x7F72;</h1>
-<p>Docker Image &#x6258;&#x7BA1;&#x5728;<a href="https://hub.daocloud.io/repos/e9aa4c04-33ac-4bc4-99fa-fb727c7acc11" target="_blank">&#x8FD9;&#x91CC;</a>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4EE5;&#x4E0B; compose &#x89C4;&#x5219;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x90E8;&#x7F72; HeyCommunity</p>
+<p>&#x6211;&#x4EEC;&#x628A; HeyCommunity &#x8FD0;&#x884C;&#x6240;&#x9700;&#x8981;&#x7684;&#x57FA;&#x7840;&#x73AF;&#x5883;&#x3001;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x7B49;&#x4E00;&#x5207;&#x4E1C;&#x897F;&#xFF0C;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A; Docker Image&#xFF0C;&#x4F7F;&#x4F60;&#x4EC5;&#x901A;&#x8FC7;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x8D77;&#x6765;   </p>
+<p>HeyCommunity &#x9700;&#x8981;&#x4E00;&#x4E2A;&#x63D0;&#x4F9B; Web Service &#x7684;&#x5BB9;&#x5668;&#x548C;&#x4E00;&#x4E2A;&#x8FD0;&#x884C; Mysql &#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; Volume &#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x6301;&#x4E45;&#x5316;<br>&#x6211;&#x4EEC;&#x4F7F;&#x7528; Docker Compose &#x4EC5;&#x4EC5;&#x51E0;&#x884C;&#x7F16;&#x6392;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0; HeyCommunity &#x7684;&#x90E8;&#x7F72;<br>&#x5176;&#x7F16;&#x6392;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x7684; <code>HeyCommunity/docker-compose.yml</code> &#x6587;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x5230;&#x6700;&#x65B0;&#x7684;&#x7F16;&#x6392;&#x4EE3;&#x7801;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539; <code>environment</code> &#x81EA;&#x5B9A;&#x4E49; HeyCommunity   </p>
 <pre><code>app:
   image: daocloud.io/rodv2/hey-community:latest
   environment:
     - LOCALE=zh-CN
-    - HC_ENV=product
+    - HC_ENV=test
     - COMMUNITY_NAME=New Community
     - ADMIN_NICKNAME=Admin
     - ADMIN_EMAIL=admin@hey-community.com
@@ -343,7 +344,17 @@ db:
   ports:
     - &quot;3306&quot;
   restart: always
-</code></pre>
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x624B;&#x52A8;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x7F16;&#x6392;&#xFF0C;&#x8BF7;&#x81EA;&#x884C;&#x67E5;&#x9605; <code>Docker Compose</code> &#x76F8;&#x5173;&#x8D44;&#x6599;<br>&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x4F60;&#x4F7F;&#x7528; DaoCloud &#x7684;&#x9879;&#x76EE;&#x7F16;&#x6392;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x89C6;&#x5316;&#x5730;&#x8FDB;&#x884C;&#x7F16;&#x6392;&#x90E8;&#x7F72;   </p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8DDF;&#x968F;&#x6211;&#x4EEC;&#x4F7F;&#x7528; DaoCloud &#x7684;&#x9879;&#x76EE;&#x7F16;&#x6392;&#x90E8;&#x7F72; HeyCommunity   </p>
+<h2 id="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;">&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h2>
+<p>&#x9996;&#x4F60;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x5E76;&#x767B;&#x5F55; <a href="https://www.daocloud.io" target="_blank">DaoCloud</a><br>&#x767B;&#x5F55;&#x540E;&#x5728;<a href="https://dashboard.daocloud.io/cluster" target="_blank">&#x6211;&#x7684;&#x96C6;&#x7FA4;</a>&#x6DFB;&#x52A0;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4E3B;&#x673A;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5148;&#x8BD5;&#x7528; DaoCloud &#x63D0;&#x4F9B;&#x7684;&#x80F6;&#x56CA;&#x4E3B;&#x673A;</p>
+<h2 id="&#x5E94;&#x7528;&#x7F16;&#x6392;">&#x5E94;&#x7528;&#x7F16;&#x6392;</h2>
+<p>&#x4E3B;&#x673A;&#x6DFB;&#x52A0;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x8FDB;&#x5165;<a href="https://dashboard.daocloud.io/stack" target="_blank">&#x5E94;&#x7528;&#x7F16;&#x6392;</a>&#x9875;&#x9762;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>Stack</code>   </p>
+<p><img src="images/docker/daocloud-stack.jpeg" alt="Stack"></p>
+<p>&#x70B9;&#x51FB;[&#x521B;&#x5EFA;&#x5E76;&#x90E8;&#x7F72;]&#x6309;&#x94AE;&#x4E4B;&#x540E;&#xFF0C;&#x7A0D;&#x7B49;&#x7247;&#x523B; HeyCommunity &#x5C31;&#x90E8;&#x7F72;&#x5E76;&#x542F;&#x52A8;&#x6210;&#x529F;</p>
+<p><img src="images/docker/daocloud-stack-detail.jpeg" alt="Stack Detail"></p>
+<p>&#x73B0;&#x5728; HeyCommunity &#x5C31;&#x6210;&#x529F;&#x901A;&#x8FC7; Daocloud &#x5E94;&#x7528;&#x7F16;&#x6392;&#x6210;&#x529F;&#x90E8;&#x7F72;&#x4E86; ~</p>
+
                                 
                                 </section>
                             
@@ -386,7 +397,7 @@ db:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"使用 Docker 部署","level":"2.2","depth":1,"next":{"title":"使用 Daocloud 快速部署","level":"2.3","depth":1,"path":"started/daocloud.md","ref":"started/daocloud.md","articles":[]},"previous":{"title":"构建与部署","level":"2.1","depth":1,"path":"started/build-deploy.md","ref":"started/build-deploy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"started/docker.md","mtime":"2017-02-16T03:53:02.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-17T07:14:28.769Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用 Docker 部署","level":"2.2","depth":1,"next":{"title":"使用 Daocloud 快速部署","level":"2.3","depth":1,"path":"started/daocloud.md","ref":"started/daocloud.md","articles":[]},"previous":{"title":"构建与部署","level":"2.1","depth":1,"path":"started/build-deploy.md","ref":"started/build-deploy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"started/docker.md","mtime":"2017-02-17T10:24:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-17T10:25:45.306Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -394,10 +405,6 @@ db:
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
