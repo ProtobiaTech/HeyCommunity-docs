@@ -24,7 +24,7 @@ DaoCloud 是新一代容器云计算领域的明星企业，现在我们使用 D
 ![运行环境](images/daocloud/deploy-env.jpeg)
 
 运行环境可选择 [云端测试环境] 用于测试   
-运行在 [我的主机] 中对于 HeyCommunity 来说也不适合用于生产，生产请使用 DaoCloud 的应用编排功能，Docker Compose YML 可参考[使用 Docker 部署](/started/docker.html)
+运行在 [我的主机] 中对于 HeyCommunity 来说也不适合用于生产，生产请使用 DaoCloud 的应用编排功能，参考[使用 Docker 部署](/started/docker.html)
 
 
 ### 基础设置

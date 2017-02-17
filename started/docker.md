@@ -2,8 +2,8 @@
 
 我们把 HeyCommunity 运行所需要的基础环境、程序代码等一切东西，打包成一个 Docker Image，使你仅通过几个简单几个步骤就可以把项目部署起来   
 
-HeyCommunity 需要一个提供 Web Service 的容器和一个运行 Mysql 的容器，还有一个 Volume 进行文件的持久化   
-我们使用 Docker Compose 仅仅几行编排代码就可以实现 HeyCommunity 的部署   
+HeyCommunity 需要一个提供 Web Service 的容器和一个运行 Mysql 的容器，还有一个 Volume 进行文件的持久化。使用 Docker Compose 仅仅几行编排代码就可以实现 HeyCommunity 的部署   
+
 其编排代码如下，你也可以在项目的 `HeyCommunity/docker-compose.yml` 文件中获取到最新的编排代码。你也可以通过修改 `environment` 自定义 HeyCommunity   
 
 ```
@@ -54,7 +54,7 @@ db:
 
 ![Stack](images/docker/daocloud-stack.jpeg)
 
-点击[创建并部署]按钮之后，稍等片刻 HeyCommunity 就部署并启动成功
+点击[创建并部署]按钮之后，稍等片刻 HeyCommunity 就会部署并启动成功
 
 ![Stack Detail](images/docker/daocloud-stack-detail.jpeg)
 

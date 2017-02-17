@@ -38,7 +38,7 @@ $ vi .env                                       ##  进行数据库、微信公�
 # php artisan migrate:refresh --seed            ##  创建数据库并生成模拟数据
 ```
 
-后端构建好之后你可以通过 `php artisan serve` 或 Apache 把后端部署起来为前端提供 API 。Apache 部署参见【运行】   
+后端构建好之后你可以通过 Apache 或 `php artisan serve` 把后端部署起来为前端提供 API 。Apache 部署参见【运行】   
 你也可以**跳过这一步**，使用我们提供的 API，具体内容参见【前端构建】
 
 
@@ -64,7 +64,7 @@ $ vi .env                                       ##  进行数据库、微信公�
 如果 API URL 和当前 URL 不相同的话，会遇到 CORS 问题，你可以设置浏览器禁用跨域限制（推荐），或者使用 `ionic serve` 代理 API 请求   
 
 #### HeyCommunity/frontend/ionic.config.json
-`ionic.config.json` 中的 `proxies` 配置代理服务，`path` 定义需要代理的目录，`proxyUrl` 定义提供代理的 API URL（即真实的 API URL，通过部署后端获得）   
+`ionic.config.json` 中的 `proxies` 配置代理服务，`path` 定义需要代理的目录，`proxyUrl` 定义被代理的 API URL（即真实的 API URL，通过部署后端获得）   
 
 #### HeyCommunity/frontend/config.xml
 `config.xml` 定义 Hybrid App 相关配置，具体内容请参见【构建 Hybrid App】
@@ -73,13 +73,12 @@ $ vi .env                                       ##  进行数据库、微信公�
 先设置 `window.API_DOMAIN = null;`，再修改 `proxies` 配置正确的代理服务，最后使用 `ionic serve` 去启动 Web App   
 `ionic serve` 会启动一个 Web Server，默认地址为 `htpp://localhost:8100`。现在通过这个地址打开 Web App 就不会出现 CORS 问题
 
-最简单的方法是禁用浏览器跨域限制
+Hybrid App 不会存在 CORS 问题，只需要通过 `window.API_DOMAIN` 定义完整的 API
+
+最简单的方法是禁用浏览器跨域限制（推荐），参考 https://github.com/zhongxia245/blog/issues/28
 
 ##### 使用 HeyCommunity 提供的 API
 我们已经在相关配置文件中使用了 HeyCommunity 提供的 API，只要你掌握了 `window.API_DOMAIN` 和 `proxies` 的用法，你就可以灵活运用它
-
-#### 注意
-Hybrid App 不会存在 CORS 问题，只需要通过 `window.API_DOMAIN` 定义完整的 API
 
 
 ### 构建 Web App
@@ -89,10 +88,12 @@ $ npm install
 $ npm run ionic:build                           ##  构建 Web App
 ```
 
-成功构建 Web App 之后，编译生成的文件会覆盖在 `HeyCommunity/frontend/www` 目录中，`index.html` 为入口文件
+成功构建 Web App 之后，编译生成的文件会覆盖在 `HeyCommunity/frontend/www` 目录中，生成的 `index.html` 就是 Web App 的入口文件
 
 你也可以安装 `Ionic` 之后，运行 `ionic serve` 进行开发或预览   
 它会监控文件的修改并即时编译，它还会启动一个 Web Service，默认通过 `htpp://localhost:8100` 即可打开 Web App
+
+需要注意的是 `npm run ionic:build` 和 `ionic serve` 都可以构建 Web App。前者是预编译，需要更多的时间才能构建完成，使 App 运行更流畅，适合生产。后者是即时编译，拥有更快的编译速度，更适合开发和测试
 
 
 ### 构建 Hybrid App
@@ -107,12 +108,11 @@ $ ionic build ios                               ## 构建 iOS App (只工作在 
 $ open platforms/ios/HeyCommunity.xcodeproj     ## Optional, use xcode to open HeyCommunity.xcodeproj, the simulator runs, real machine test, upload to the AppStore
 ```
 
-成功 `build android` 之后，构建的 apk 文件会在 `HeyCommunity/frontend/platforms/android/build/outputs` 目录中   
-成功 `build ios` 之后，会生成一个 xcodeproj 存放在 `HeyCommunity/frontend/platforms/ios` 目录中，使用 Xcode 打开目录中的 `HeyCommunity.xcodeproj`，即可通过 Xcode 去做真机调试或者上传到 AppStore
+成功 `build android` 之后，构建的 apk 文件会在 `HeyCommunity/frontend/platforms/android/build/outputs` 目录中，发送到 Android 设备即可安装使用   
+
+成功 `build ios` 之后，会生成一个 xcodeproj 存放在 `HeyCommunity/frontend/platforms/ios` 目录中，使用 Xcode 打开目录中的 `HeyCommunity.xcodeproj`，即可进行真机调试或者打包上传到 AppStore
 
 在 `HeyCommunity/frontend/config.xml` 文件中定义了 App Name / Bundle ID / Version 和一些插件的参数，你可以为你自己的 App 做相关修改
-
-
 
 
 ## 运行

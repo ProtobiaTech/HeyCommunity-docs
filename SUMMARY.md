@@ -18,7 +18,7 @@
 ## 支持
 * [FAQ](support/faq.md)
 * [二次开发指南](support/secondary-development-guide.md)
-* [Bug和问题](support/issue.md)
+* [Bug & issues](support/issue.md)
 * [交流和讨论](support/bbs.md)
 
 
