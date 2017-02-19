@@ -1,0 +1,15 @@
+{
+    "plugins": ["ga", "github", "edit-link"],
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-68392745-5"
+        },
+        "github": {
+            "url": "https://github.com/dev4living/HeyCommunity-docs"
+        },
+        "edit-link": {
+            "base": "https://github.com/dev4living/HeyCommunity-docs/edit/dev/",
+            "label": "Edit This Page"
+        }
+    }
+}
