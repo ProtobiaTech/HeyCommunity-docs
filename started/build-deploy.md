@@ -64,7 +64,8 @@ $ vi .env                                       ##  进行数据库、微信公�
 如果 API URL 和当前 URL 不相同的话，会遇到 CORS 问题，你可以设置浏览器禁用跨域限制（推荐），或者使用 `ionic serve` 代理 API 请求   
 
 #### HeyCommunity/frontend/ionic.config.json
-`ionic.config.json` 中的 `proxies` 配置代理服务，`path` 定义需要代理的目录，`proxyUrl` 定义被代理的 API URL（即真实的 API URL，通过部署后端获得）   
+`ionic.config.json` 中的 `proxies` 配置代理服务，`path` 定义需要代理的目录，`proxyUrl` 定义被代理的 API URL（即真实的 API URL，通过部署后端获得）   
+该文件仅会在 `ionic serve` 方式运行下生效   
 
 #### HeyCommunity/frontend/config.xml
 `config.xml` 定义 Hybrid App 相关配置，具体内容请参见【构建 Hybrid App】
